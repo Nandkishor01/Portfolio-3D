@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for the 3D scene -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Information Panel (initially hidden) -->
+    <div id="info-panel">
+        <button id="close-btn">×</button>
+        <h2 id="info-title"></h2>
+        <p id="info-description"></p>
+        <a id="info-link" href="#" target="_blank" rel="noopener noreferrer">Learn More</a>
+    </div>
+
+    <!-- Loading Screen (Optional but good practice) -->
+    <div id="loading-screen">
+        Loading 3D Experience...
+    </div>
+
+    <!-- Import Three.js (using ES Modules type) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <!-- Your main script -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
